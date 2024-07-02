@@ -1,4 +1,3 @@
-import { type } from 'os';
 import mongoose from './index.js';
 
 const sovloSchema = new mongoose.Schema({
