@@ -29,14 +29,14 @@ router.post('/upload', uploadMiddleware.single('image'), async (req, res) => {
         }
 
         const sovloImage = req.file.filename;
-
+           console.log(sovloImage);
         const data = await sovloModel.create({sovloImage});
-        
+         console.log(data);
         res.status(201).send({
             message: "Image uploaded successfully",
             data
         });
-
+       
     } catch (error) {
         console.log(error);
         res.status(500).send({ message: "Internal server error", error: error.message });
