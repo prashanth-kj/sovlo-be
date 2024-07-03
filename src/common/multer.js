@@ -4,7 +4,7 @@ import path from 'path';
 // Define storage settings for Multer
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'Public/images'); // Set the destination directory for uploads
+        cb(null, 'Public'); // Set the destination directory for uploads
     },
     filename: (req, file, cb) => {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
